@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Th3FalleN\Support;
 
 use Countable;
-use Illuminate\Contracts\Support\MessageBag as MessageBagContract;
+use Th3FalleN\Support\Contracts\MessageBag as MessageBagContract;
 
 class ViewErrorBag implements Countable
 {
@@ -17,7 +17,8 @@ class ViewErrorBag implements Countable
     /**
      * Checks if a named MessageBag exists in the bags.
      *
-     * @param  string  $key
+     * @param  string $key
+     *
      * @return bool
      */
     public function hasBag($key = 'default')
@@ -28,8 +29,9 @@ class ViewErrorBag implements Countable
     /**
      * Get a MessageBag instance from the bags.
      *
-     * @param  string  $key
-     * @return \Illuminate\Contracts\Support\MessageBag
+     * @param  string $key
+     *
+     * @return \Th3FalleN\Support\Contracts\MessageBag
      */
     public function getBag($key)
     {
@@ -49,8 +51,9 @@ class ViewErrorBag implements Countable
     /**
      * Add a new MessageBag instance to the bags.
      *
-     * @param  string  $key
-     * @param  \Illuminate\Contracts\Support\MessageBag  $bag
+     * @param  string $key
+     * @param  \Th3FalleN\Support\Contracts\MessageBag $bag
+     *
      * @return $this
      */
     public function put($key, MessageBagContract $bag)
@@ -73,8 +76,9 @@ class ViewErrorBag implements Countable
     /**
      * Dynamically call methods on the default bag.
      *
-     * @param  string  $method
-     * @param  array  $parameters
+     * @param  string $method
+     * @param  array $parameters
+     *
      * @return mixed
      */
     public function __call($method, $parameters)
@@ -85,8 +89,9 @@ class ViewErrorBag implements Countable
     /**
      * Dynamically access a view error bag.
      *
-     * @param  string  $key
-     * @return \Illuminate\Contracts\Support\MessageBag
+     * @param  string $key
+     *
+     * @return \Th3FalleN\Support\Contracts\MessageBag
      */
     public function __get($key)
     {
@@ -96,8 +101,9 @@ class ViewErrorBag implements Countable
     /**
      * Dynamically set a view error bag.
      *
-     * @param  string  $key
-     * @param  \Illuminate\Contracts\Support\MessageBag  $value
+     * @param  string $key
+     * @param  \Th3FalleN\Support\Contracts\MessageBag $value
+     *
      * @return void
      */
     public function __set($key, $value)

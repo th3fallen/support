@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Support;
+namespace Th3FalleN\Support;
 
-use Illuminate\Contracts\Support\Htmlable;
+use Th3FalleN\Support\Contracts\Htmlable;
 
 class HtmlString implements Htmlable
 {
@@ -16,7 +16,8 @@ class HtmlString implements Htmlable
     /**
      * Create a new HTML string instance.
      *
-     * @param  string  $html
+     * @param  string $html
+     *
      * @return void
      */
     public function __construct($html)
